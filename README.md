@@ -19,6 +19,7 @@ For more detail see below:
 
 Double click open the `index.html` file in browser, and open a device for send / receive data.
 
+Note: WebHID API is an experimental technology, just new Chrome/Edge/Opera browser support it now.
 
 ## Screenshot
 
