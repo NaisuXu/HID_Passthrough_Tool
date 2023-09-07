@@ -38,7 +38,7 @@
       if ("hid" in navigator) {
         // 浏览器支持hid
       } else {
-        alert("Browser is not supported Web HID API.");
+        alert("Your browser is not support Web HID API.");
       }
     </script>
   </head>
@@ -102,11 +102,11 @@
             await device.open(); // 打开设备
 
             // 下面几行代码和我的自定义的透传的HID设备有关
-            // 我的设备中有一个collection，其中有一个input、一个output
+            // 我的设备中有一个collection，包含一个input、一个output
             // inputReports和outputReports数据是Array，reportSize是8
             // reportCount表示一包数据的字节数，USB-FS 和 USB-HS 设置的reportCount最大值不同
             if (device.collections[0].inputReports[0].items[0].isArray && device.collections[0].inputReports[0].items[0].reportSize === 8) {
-              // 发送数据包长度必须和报告描述符中描述的一致
+              
               inputDataLength = device.collections[0].inputReports[0].items[0].reportCount ?? 0;
             }
             if (device.collections[0].outputReports[0].items[0].isArray && device.collections[0].outputReports[0].items[0].reportSize === 8) {
